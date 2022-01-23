@@ -1,4 +1,3 @@
-using ValidParentheses;
 using Xunit;
 
 namespace ValidParenthesesUnitTests

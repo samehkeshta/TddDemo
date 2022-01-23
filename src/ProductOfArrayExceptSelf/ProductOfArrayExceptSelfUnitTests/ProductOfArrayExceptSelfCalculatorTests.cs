@@ -1,4 +1,3 @@
-using ProductOfArrayExceptSelf;
 using System;
 using Xunit;
 

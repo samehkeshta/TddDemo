@@ -1,4 +1,6 @@
-﻿namespace ProductOfArrayExceptSelf
+﻿using System;
+
+namespace ProductOfArrayExceptSelfUnitTests
 {
     /// <summary>
     /// https://leetcode.com/problems/product-of-array-except-self/

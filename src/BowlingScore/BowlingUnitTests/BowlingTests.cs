@@ -1,4 +1,3 @@
-using Bowling;
 using Xunit;
 
 namespace BowlingUnitTests

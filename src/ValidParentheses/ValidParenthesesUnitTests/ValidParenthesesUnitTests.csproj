@@ -20,8 +20,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ValidParentheses\ValidParentheses.csproj" />
-  </ItemGroup>
-
 </Project>

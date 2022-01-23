@@ -1,4 +1,4 @@
-﻿namespace Bowling
+﻿namespace BowlingUnitTests
 {
     public class Game
     {
