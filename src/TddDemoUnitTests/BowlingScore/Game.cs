@@ -1,4 +1,4 @@
-﻿namespace BowlingUnitTests
+﻿namespace TddDemoUnitTests.BowlingScore
 {
     public class Game
     {

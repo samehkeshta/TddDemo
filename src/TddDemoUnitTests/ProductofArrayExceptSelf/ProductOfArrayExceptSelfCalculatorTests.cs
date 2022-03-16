@@ -1,7 +1,8 @@
+using Shouldly;
 using System;
 using Xunit;
 
-namespace ProductOfArrayExceptSelfUnitTests
+namespace TddDemoUnitTests.ProductofArrayExceptSelf
 {
     public class ProductOfArrayExceptSelfCalculatorTests
     {
@@ -17,7 +18,7 @@ namespace ProductOfArrayExceptSelfUnitTests
         [InlineData(new int[] { 5 })]
         public void ArrayHaveLessThan2Items_ThrowsException(int[] nums)
         {
-            Assert.Throws<Exception>(() => _productOfArrayExceptSelfCalculator.ProductExceptSelf(nums));
+            Should.Throw<Exception>(() => _productOfArrayExceptSelfCalculator.ProductExceptSelf(nums));
         }
 
         [Fact]
@@ -27,7 +28,7 @@ namespace ProductOfArrayExceptSelfUnitTests
 
             var result = _productOfArrayExceptSelfCalculator.ProductExceptSelf(nums);
 
-            Assert.Equal(new int[] { 2, 1 }, result);
+            result.ShouldBe(new int[] { 2, 1 });
         }
 
         [Fact]
@@ -37,7 +38,7 @@ namespace ProductOfArrayExceptSelfUnitTests
 
             var result = _productOfArrayExceptSelfCalculator.ProductExceptSelf(nums);
 
-            Assert.Equal(new int[] { 24, 12, 8, 6 }, result);
+            result.ShouldBe(new int[] { 24, 12, 8, 6 });
         }
 
         [Fact]
@@ -47,7 +48,7 @@ namespace ProductOfArrayExceptSelfUnitTests
 
             var result = _productOfArrayExceptSelfCalculator.ProductExceptSelf(nums);
 
-            Assert.Equal(new int[] { 0, 0, 9, 0, 0 }, result);
+            result.ShouldBe(new int[] { 0, 0, 9, 0, 0 });
         }
     }
 }

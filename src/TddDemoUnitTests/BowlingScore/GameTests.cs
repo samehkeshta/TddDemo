@@ -1,12 +1,13 @@
+using Shouldly;
 using Xunit;
 
-namespace BowlingUnitTests
+namespace TddDemoUnitTests.BowlingScore
 {
-    public class BowlingTests
+    public class GameTests
     {
         private readonly Game _game;
 
-        public BowlingTests()
+        public GameTests()
         {
             _game = new Game();
         }
@@ -15,7 +16,7 @@ namespace BowlingUnitTests
         public void RollZero_ScoreIsZero()
         {
             _game.Roll(0);
-            Assert.Equal(0, _game.Score());
+            _game.Score().ShouldBe(0);
         }
 
         [Fact]
@@ -23,7 +24,7 @@ namespace BowlingUnitTests
         {
             _game.Roll(4);
             _game.Roll(2);
-            Assert.Equal(6, _game.Score());
+            _game.Score().ShouldBe(6);
         }
 
         [Fact]
@@ -33,7 +34,7 @@ namespace BowlingUnitTests
             _game.Roll(6);
             _game.Roll(3);
             _game.Roll(0);
-            Assert.Equal(16, _game.Score());
+            _game.Score().ShouldBe(16);
         }
 
         [Fact]
@@ -43,7 +44,7 @@ namespace BowlingUnitTests
             _game.Roll(6);
             _game.Roll(4);
             _game.Roll(2);
-            Assert.Equal(15, _game.Score());
+            _game.Score().ShouldBe(15);
         }
 
         [Fact]
@@ -52,7 +53,7 @@ namespace BowlingUnitTests
             _game.Roll(10);
             _game.Roll(3);
             _game.Roll(2);
-            Assert.Equal(20, _game.Score());
+            _game.Score().ShouldBe(20);
         }
 
         [Fact]
@@ -63,7 +64,7 @@ namespace BowlingUnitTests
                 _game.Roll(10);
             }
 
-            Assert.Equal(300, _game.Score());
+            _game.Score().ShouldBe(300);
         }
     }
 }

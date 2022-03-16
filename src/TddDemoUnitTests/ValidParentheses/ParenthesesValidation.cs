@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ValidParenthesesUnitTests
+namespace TddDemoUnitTests.ValidParentheses
 {
     public class ParenthesesValidation
     {

@@ -1,6 +1,7 @@
+using Shouldly;
 using Xunit;
 
-namespace ValidParenthesesUnitTests
+namespace TddDemoUnitTests.ValidParentheses
 {
     public class ParenthesesValidationTests
     {
@@ -30,8 +31,8 @@ namespace ValidParenthesesUnitTests
         public void OpenBrackets_MustBeClosedByTheSameTypeOfBrackets(string s)
         {
             var result = _parenthesesValidation.Validate(s);
-            
-            Assert.True(result);
+
+            result.ShouldBeTrue();
         }
 
         [Theory]
@@ -42,7 +43,7 @@ namespace ValidParenthesesUnitTests
         {
             var result = _parenthesesValidation.Validate(s);
 
-            Assert.True(result);
+            result.ShouldBeTrue();
         }
 
         [Theory]
@@ -54,7 +55,7 @@ namespace ValidParenthesesUnitTests
         {
             var result = _parenthesesValidation.Validate(s);
 
-            Assert.False(result);
+            result.ShouldBeFalse();
         }
     }
 }

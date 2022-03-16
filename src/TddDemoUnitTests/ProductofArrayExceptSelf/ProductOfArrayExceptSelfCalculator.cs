@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProductOfArrayExceptSelfUnitTests
+namespace TddDemoUnitTests.ProductofArrayExceptSelf
 {
     /// <summary>
     /// https://leetcode.com/problems/product-of-array-except-self/
